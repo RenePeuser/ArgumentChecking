@@ -8,9 +8,9 @@ namespace ArgumentChecking
 {
     public class LazyArgumentRepository : ArgumentRepository
     {
-        readonly Dictionary<Type, Validator> _validatorDictionary = new Dictionary<Type, Validator>();
+        private readonly Dictionary<Type, Validator> _validatorDictionary = new Dictionary<Type, Validator>();
 
-        public LazyArgumentRepository(Expression<Func<object>>[] expressions) : base(expressions)
+        public LazyArgumentRepository(IEnumerable<Expression<Func<object>>> expressions) : base(expressions)
         {
         }
 
@@ -31,7 +31,7 @@ namespace ArgumentChecking
 
     public class ArgumentRepository
     {
-        public ArgumentRepository(Expression<Func<object>>[] expressions)
+        public ArgumentRepository(IEnumerable<Expression<Func<object>>> expressions)
         {
             Arguments = expressions.Select(item => new Argument(item)).ToArray();
         }

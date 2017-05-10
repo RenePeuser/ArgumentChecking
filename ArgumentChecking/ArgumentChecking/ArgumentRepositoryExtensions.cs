@@ -50,7 +50,7 @@ namespace ArgumentChecking
 
         private static void Evaluate(this ArgumentRepository source, Validator validator)
         {
-            var errors = source.Arguments.Where(validator.Validate);
+            var errors = source.Arguments.Where(validator.Validate).ToList();
             if (errors.Any())
             {
                 throw new ArgumentException($"{validator.Message}\n{errors.ToMessage()}");
