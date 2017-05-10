@@ -48,12 +48,12 @@
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\GenericTypeExtensions.cs" />
     <Compile Include="Validation\IsNullValidator.cs" />
+    <Compile Include="Validation\IsStringWhitespaceValidator.cs" />
     <Compile Include="Validation\IsStringEmptyValidator.cs" />
     <Compile Include="LazyArgumentRepositoryExtensions.cs" />
-    <Compile Include="Model\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Extensions\TcExpressionExtensions.cs" />
-    <Compile Include="TcObjectExtensions.cs" />
+    <Compile Include="Extensions\ExpressionExtensions.cs" />
+    <Compile Include="ObjectExtensions.cs" />
     <Compile Include="Validation\Validator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

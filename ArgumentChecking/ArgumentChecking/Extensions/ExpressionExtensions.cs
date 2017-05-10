@@ -3,7 +3,7 @@ using System.Linq.Expressions;
 
 namespace ArgumentChecking.Extensions
 {
-    public static class TcExpressionExtensions
+    public static class ExpressionExtensions
     {
         public static string NameOf(this Expression expression)
         {

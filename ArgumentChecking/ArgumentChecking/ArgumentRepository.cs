@@ -14,7 +14,7 @@ namespace ArgumentChecking
         {
         }
 
-        public void Add(Validator validator)
+        public void AddValidator(Validator validator)
         {
             var type = validator.GetType();
             if (!_validatorDictionary.ContainsKey(type))

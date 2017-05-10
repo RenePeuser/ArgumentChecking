@@ -6,7 +6,7 @@ using ArgumentChecking.Validation;
 
 namespace ArgumentChecking
 {
-    public static class LazyArgumentRepositoryExtensions
+    public static class LazyLazyArgumentRepositoryExtensions
     {
         public static LazyArgumentRepository IsNull(this LazyArgumentRepository source)
         {
@@ -15,7 +15,7 @@ namespace ArgumentChecking
                 throw new ArgumentException();
             }
 
-            source.Add(new IsNullValidator());
+            source.AddValidator(new IsNullValidator());
             return source;
         }
 
@@ -26,9 +26,34 @@ namespace ArgumentChecking
                 throw new ArgumentException();
             }
 
-            source.Add(new IsStringEmptyValidator());
+            source.AddValidator(new IsStringEmptyValidator());
             return source;
         }
+
+        public static LazyArgumentRepository IsWhitespace(this LazyArgumentRepository source)
+        {
+            if (source == null)
+            {
+                throw new ArgumentException();
+            }
+
+            source.AddValidator(new IsStringWhitespaceValidator());
+            return source;
+        }
+
+        public static LazyArgumentRepository IsValidString(this LazyArgumentRepository source)
+        {
+            if (source == null)
+            {
+                throw new ArgumentException();
+            }
+
+            source.AddValidator(new IsNullValidator());
+            source.AddValidator(new IsStringEmptyValidator());
+            source.AddValidator(new IsStringWhitespaceValidator());
+            return source;
+        }
+
 
         public static void Evaluate(this LazyArgumentRepository source)
         {

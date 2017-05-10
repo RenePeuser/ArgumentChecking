@@ -26,6 +26,28 @@ namespace ArgumentChecking
             Evaluate(source, new IsStringEmptyValidator());
         }
 
+        public static void IsWhitespace(this ArgumentRepository source)
+        {
+            if (source == null)
+            {
+                throw new ArgumentException();
+            }
+
+            Evaluate(source, new IsStringWhitespaceValidator());
+        }
+
+        public static void IsValidString(this ArgumentRepository source)
+        {
+            if (source == null)
+            {
+                throw new ArgumentException();
+            }
+
+            Evaluate(source, new IsNullValidator());
+            Evaluate(source, new IsStringEmptyValidator());
+            Evaluate(source, new IsStringWhitespaceValidator());
+        }
+
         private static void Evaluate(this ArgumentRepository source, Validator validator)
         {
             var errors = source.Arguments.Where(validator.Validate);

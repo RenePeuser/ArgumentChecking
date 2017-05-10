@@ -2,7 +2,7 @@
 
 namespace ArgumentChecking
 {
-    internal static class TcObjectExtensions
+    internal static class ObjectExtensions
     {
         public static T As<T>(this object source)
         {
