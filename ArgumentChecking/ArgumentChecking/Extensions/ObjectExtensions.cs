@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ArgumentChecking
+﻿namespace ArgumentChecking.Extensions
 {
     internal static class ObjectExtensions
     {

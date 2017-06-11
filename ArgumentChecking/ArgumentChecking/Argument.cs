@@ -22,4 +22,24 @@ namespace ArgumentChecking
 
         public object Value { get; }
     }
+
+
+    public class Argument<T>
+    {
+        public Argument(Expression<Func<T>> expression)
+        {
+            ArgumentExpression = expression;
+            CompiledExpression = expression.Compile();
+            ArgumentName = expression.NameOf();
+            Value = CompiledExpression.Invoke().As<T>();
+        }
+
+        public Expression<Func<T>> ArgumentExpression { get; }
+
+        public Func<T> CompiledExpression { get; }
+
+        public string ArgumentName { get; }
+
+        public T Value { get; }
+    }
 }

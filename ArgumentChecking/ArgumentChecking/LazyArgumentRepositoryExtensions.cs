@@ -54,7 +54,6 @@ namespace ArgumentChecking
             return source;
         }
 
-
         public static void Evaluate(this LazyArgumentRepository source)
         {
             var stringBuilder = new StringBuilder();
