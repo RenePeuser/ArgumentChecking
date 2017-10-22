@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace SuperFastArgumentCheckTest
+namespace ArgumentCheck.Test
 {
     internal static class UtfHelper
     {

@@ -9,7 +9,7 @@ using System.Globalization;
 using System.Reflection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace SuperFastArgumentCheckTest
+namespace ArgumentCheck.Test
 {
     /// <summary>
     /// Attribute that specifies to expect an exception of the specified type

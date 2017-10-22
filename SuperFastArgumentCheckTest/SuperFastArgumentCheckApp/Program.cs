@@ -1,6 +1,4 @@
-﻿using SuperFastArgumentCheck;
-
-namespace SuperFastArgumentCheckApp
+﻿namespace ArgumentCheck.App
 {
     class Program
     {

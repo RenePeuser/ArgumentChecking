@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.13
+VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFastArgumentCheckTest", "SuperFastArgumentCheckTest\SuperFastArgumentCheckTest.csproj", "{FD5FADFE-A562-46C0-93A0-DDB3576FC974}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArgumentCheck.Test", "SuperFastArgumentCheckTest\ArgumentCheck.Test.csproj", "{FD5FADFE-A562-46C0-93A0-DDB3576FC974}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFastArgumentCheck", "..\SuperFastArgumentCheck\SuperFastArgumentCheck.csproj", "{9C9755E9-DD46-4DDE-9D8E-044EDE9BAA3B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArgumentCheck", "..\SuperFastArgumentCheck\ArgumentCheck.csproj", "{9C9755E9-DD46-4DDE-9D8E-044EDE9BAA3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFastArgumentCheckApp", "SuperFastArgumentCheckApp\SuperFastArgumentCheckApp.csproj", "{D2953588-14CC-495F-80C5-9C5108AEE1C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArgumentCheck.App", "SuperFastArgumentCheckApp\ArgumentCheck.App.csproj", "{D2953588-14CC-495F-80C5-9C5108AEE1C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +30,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DCEE2329-A111-4B04-A518-96D1198B8B8C}
 	EndGlobalSection
 EndGlobal

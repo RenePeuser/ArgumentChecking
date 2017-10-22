@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SuperFastArgumentCheck;
 
-namespace SuperFastArgumentCheckTest
+namespace ArgumentCheck.Test
 {
     [TestClass]
     public class ExpectTest

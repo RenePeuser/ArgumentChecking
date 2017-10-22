@@ -1,7 +1,7 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace SuperFastArgumentCheckTest
+namespace ArgumentCheck.Test
 {
     public static class ExceptionHelper
     {

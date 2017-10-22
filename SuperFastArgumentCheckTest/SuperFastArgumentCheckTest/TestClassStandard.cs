@@ -1,7 +1,7 @@
 
 using System;
 
-namespace SuperFastArgumentCheckTest
+namespace ArgumentCheck.Test
 {
     public class TestClassStandard
     {

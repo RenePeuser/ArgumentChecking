@@ -1,7 +1,6 @@
-﻿using System.Runtime.CompilerServices;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace SuperFastArgumentCheckTest
+namespace ArgumentCheck.Test
 {
     [TestClass]
     public class SpeedTest

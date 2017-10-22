@@ -1,6 +1,4 @@
-using SuperFastArgumentCheck;
-
-namespace SuperFastArgumentCheckTest
+namespace ArgumentCheck.Test
 {
     public class TestClassFunc
     {

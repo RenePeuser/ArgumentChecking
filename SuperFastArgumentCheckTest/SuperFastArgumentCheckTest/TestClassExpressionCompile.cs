@@ -1,7 +1,7 @@
 using System;
 using System.Linq.Expressions;
 
-namespace SuperFastArgumentCheckTest
+namespace ArgumentCheck.Test
 {
     public class TestClassExpressionCompile
     {

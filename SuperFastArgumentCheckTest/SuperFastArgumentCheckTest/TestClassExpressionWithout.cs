@@ -2,7 +2,7 @@ using System;
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace SuperFastArgumentCheckTest
+namespace ArgumentCheck.Test
 {
     public class TestClassExpressionWithout
     {
