@@ -13,4 +13,14 @@ namespace SuperFastArgumentCheckTest
             Name = name;
         }
     }
+
+    public class TestClassUltra
+    {
+        public string Name { get; set; }
+
+        public TestClassUltra(string name)
+        {
+            Name = name;
+        }
+    }
 }

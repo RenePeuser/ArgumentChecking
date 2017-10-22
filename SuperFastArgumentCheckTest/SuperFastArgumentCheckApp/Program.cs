@@ -4,18 +4,22 @@ namespace SuperFastArgumentCheckApp
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            DoSomething(null, "b", null, "u");
-            DoSomething("c", "r", "f", string.Empty);
+            var a = new Person("a", null, "c", null);
         }
 
-        private static void DoSomething(string name, string dateTime, string next, string emptyValue)
+
+        public class Person
         {
-            Expect.NotNull(() => name);
-            Expect.NotNull(() => dateTime);
-            Expect.NotNull(() => next);
-            Expect.IsEmpty(() => emptyValue);
+            public Person(string name, string dateTime, string next, string emptyValue)
+            {
+                Expect.NotNull(() => dateTime);
+                Expect.NotNull(() => name);
+                Expect.NotNull(() => next);
+                Expect.IsEmpty(() => emptyValue);
+            }
         }
+
     }
 }

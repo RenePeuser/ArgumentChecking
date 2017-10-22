@@ -8,6 +8,12 @@
 
         public ArgumentTestClass(object cloneable, string name, string something, int age)
         {
+
+            //Expect.NotNullUltra(cloneable);
+            //Expect.NotNullUltra(name);
+            //Expect.NotNullUltra(something);
+
+            Expect.NotNull(() => name);
             Expect.NotNull(() => cloneable);
 
             Expect.NotNull(() => name);

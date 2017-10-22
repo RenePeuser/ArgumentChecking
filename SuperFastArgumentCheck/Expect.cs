@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 
 namespace SuperFastArgumentCheck
@@ -43,7 +44,7 @@ namespace SuperFastArgumentCheck
             var value = func();
             if (value == null)
             {
-                var fields = func.Target.GetType().GetFields();
+                var fields = func.Target.GetType().GetFields(BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public | BindingFlags.DeclaredOnly);
                 var fieldInfo = fields.FirstOrDefault(f => f.GetValue(func.Target) == null);
                 throw new ArgumentNullException(fieldInfo.Name);
             }
@@ -105,6 +106,9 @@ namespace SuperFastArgumentCheck
         //[DebuggerHidden]
         public static int IsOutOfRange(Func<int> func, int min, int max)
         {
+
+            string.Intern("Test");
+
             var value = func();
             if (value < min && value > max)
             {
@@ -113,6 +117,6 @@ namespace SuperFastArgumentCheck
                 throw new ArgumentException("The value must be in range from .. till ..", fieldInfo.Name);
             }
             return value;
-        }
+        }      
     }
 }
